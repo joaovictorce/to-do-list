@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Lista de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+    <h1>Minha Lista de Tarefas</h1>
+
+    <p>Organize seu dia de forma simples!</p>
+
+    <div class="adicionar-tarefa">
+
+        <input type="text" id="tarefa" placeholder="Digite uma nova tarefa">
+        <select id="prioridade">
+            <option value="" disabled selected>Prioridade</option>
+    <option value="baixa">🟢 Baixa</option>
+    <option value="media">🟡 Média</option>
+    <option value="alta">🔴 Alta</option>
+</select>
+
+        <button id="adicionar">Adicionar</button>
+
+    </div>
+<div class="filtros">
+
+    <button id="mostrar-todas">Todas</button>
+
+    <button id="mostrar-pendentes">Pendentes</button>
+
+    <button id="mostrar-concluidas">Concluídas</button>
+
+</div>
+    <ul id="lista-tarefas"></ul>
+<div class="contador">
+    <p>Total: <span id="total">0</span></p>
+    <p>Concluídas: <span id="concluidas">0</span></p>
+    <p>Pendentes: <span id="pendentes">0</span></p>
+</div>
+<div class="progresso-container">
+
+    <p>Progresso das tarefas: <span id="porcentagem">0%</span></p>
+
+    <div class="barra-progresso">
+
+        <div id="progresso"></div>
+
+    </div>
+
+</div>
+<button id="limpar-concluidas">
+Limpar tarefas concluídas
+</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

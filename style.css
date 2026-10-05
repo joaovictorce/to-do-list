@@ -1,0 +1,321 @@
+body {
+    font-family: Arial, sans-serif;
+   background: linear-gradient(135deg, #eef2f7, #dfe7f1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+   .container {
+    background-color: white;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+    width: 430px;
+    max-width: 90%;
+}
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    color: #777;
+    margin-bottom: 25px;
+}
+.adicionar-tarefa{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+input {
+    flex: 1;
+    padding: 13px 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 14px;
+    min-width: 0;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #4caf50;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.15);
+}
+#prioridade {
+    padding: 12px 10px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+#prioridade:focus {
+    border-color: #4caf50;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.15);
+}
+#adicionar {
+    background: #4caf50;
+    padding: 13px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(76, 175, 80, 0.20);
+}
+
+#adicionar:hover {
+    background: #43a047;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(76, 175, 80, 0.30);
+}
+
+#adicionar:active {
+    transform: translateY(0);
+}
+.filtros button {
+    flex: 1;
+    background-color: #eef1f5;
+    color: #555;
+    border-radius: 10px;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.filtros button:hover {
+    background-color: #dfe5eb;
+    transform: translateY(-2px);
+}
+
+.filtros button.ativo {
+    background-color: #4caf50;
+    color: white;
+    box-shadow: 0 4px 10px rgba(76, 175, 80, 0.25);
+}
+button{
+    padding: 12px 18px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+button:hover{
+    background-color: #45a049;
+}
+#lista-tarefas {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+#lista-tarefas li {
+    background-color: #ffffff;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s;
+}
+#lista-tarefas li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.10);
+}
+.concluida {
+    text-decoration: line-through;
+    color: #999;
+    background-color: #e8f5e9 !important;
+}
+#lista-tarefas li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.excluir{
+    background-color: #e74c3c;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.excluir:hover{
+    background-color: #c0392b;
+}
+
+
+.editar {
+    background-color: #3498db;
+    color: white;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.editar:hover{
+    background-color: #2980b9;
+}
+.contador{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+.contador p{
+    background-color: #f1f3f5;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    text-align: center;
+    flex: 1;
+}
+.contador span{
+    font-weight: bold;
+    color: #28a745;
+}
+.filtros{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.filtros button{
+    flex: 1;
+    background-color: #e9ecef;
+    color: #333;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.filtros button:hover {
+    background-color: #28a745;
+    color: white;
+}
+.filtros button.ativo {
+    background-color: #28a745;
+    color: white;
+}
+.grupo-botoes {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-left: auto;
+}
+.progresso-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.progresso-container p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.barra-progresso {
+    width: 100%;
+    height: 15px;
+    background-color: #e9eef3;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#progresso {
+    width: 0%;
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 10px;
+    transition: width 0.4s ease;
+}
+#lista-tarefas small{
+    display: block;
+    font-size: 11px;
+    color: #777;
+    margin-top: 4px;
+}
+.info-tarefa{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+/* PRIORIDADES DAS TAREFAS */
+
+#lista-tarefas li.baixa {
+    border-left: 5px solid #4caf50;
+}
+
+#lista-tarefas li.media {
+    border-left: 5px solid #ffc107;
+}
+
+#lista-tarefas li.alta {
+    border-left: 5px solid #e74c3c;
+}
+.info-tarefa{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.info-tarefa span{
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+.info-tarefa small{
+    font-size: 11px;
+    color: #888;
+}
+.editar,
+.excluir {
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.2s;
+}
+
+.editar:hover,
+.excluir:hover {
+    transform: translateY(-2px) scale(1.05);
+}
+
+.editar:active,
+.excluir:active {
+    transform: scale(0.95);
+}
+@media (max-width: 600px) {
+
+.adicionar-tarefa{
+    flex-wrap: wrap;
+
+}
+    .adicionar-tarefa input{
+        flex-basis: 100%;    
+    }
+    
+    #prioridade{
+        flex: 1;
+    }
+    #adicionar{
+        flex: 1;
+    }
+    .container {
+    padding: 25px 20px;
+    max-width: 100%;
+}
+}
